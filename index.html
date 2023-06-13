@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web API Quiz</title>
+    <link rel="stylesheet" href ="./Assets/CSS/style.css">
+</head>
+<body>
+    <body>
+        <div class="scores">View Highscores</a></div>
+    
+        <div class="timer">Time: <span id="time">0</span></div>
+    
+        <div class="wrapper">
+          <div id="start-screen" class="start">
+            <h1>Coding Quiz Challenge</h1>
+            <p>
+                Try to answer the following code-related questions within the limit. Keep in mind that incorrect answers will penalise your score time by 10 seconds
+            </p>
+            <button id="start">Start Quiz</button>
+          </div>
+    
+          <div id="questions" class="hide">
+            <h2 id="question-title"></h2>
+            <div id="choices" class="choices"></div>
+          </div>
+    
+          <div id="end-screen" class="hide">
+            <h2>All done!</h2>
+            <p>Your final score is <span id="final-score"></span>.</p>
+            <p>
+              Enter initials: <input type="text" id="initials" />
+              <button id="submit">Submit</button>
+            </p>
+          </div>
+    
+          <div id="response" class="response hide"></div>
+        </div>
+    
+          <script src="./Assets/JS/script.js"></script>
+      </body>
+    </html>
