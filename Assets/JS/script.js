@@ -27,7 +27,7 @@ var questions = [
 ];
 
 // DOM elements
-
+var startScreenEl = document.getElementById("start-screen");
 var questionsEl = document.getElementById("questions");
 var timerEl = document.getElementById("time");
 var choicesEl = document.getElementById("choices");
@@ -37,21 +37,18 @@ var startBtn = document.getElementById("start");
 var initialsEl = document.getElementById("initials");
 
 
-// quiz state variables
 var currentQuestionIndex = 0; 
 var time = questions.length * 10;
 var timerId;
 
 function startGame() {
   // hide start screen
-  var startScreenEl = document.getElementById("start-screen");
   startScreenEl.setAttribute("class", "hide");
-
   // un-hide questions section
   questionsEl.removeAttribute("class");
 
   // start timer
-  timerId = setInterval(clockTick, 1000);
+  timerId = setInterval(timerDown, 1000);
 
   // show starting time
   timerEl.textContent = time;
@@ -102,16 +99,16 @@ function questionClick() {
     responseEl.textContent = "Correct!";
   }
 
-  // show right/wrong response
+  // show correct/wrong response
   responseEl.setAttribute("class", "response");
   setTimeout(function() {
     responseEl.setAttribute("class", "response hide");
   }, 1000);
 
-  // next question
+  // moves to next question
   currentQuestionIndex++;
 
-  // checks to see if enought time and either ends game or gets new question
+  // checks to see if enough time and either ends game, or gets new question
   if (currentQuestionIndex === questions.length) {
     endGame();
   } else {
@@ -130,7 +127,7 @@ function endGame() {
   questionsEl.setAttribute("class", "hide");
 }
 //updates time
-function clockTick() {
+function timerDown() {
     time--;
   timerEl.textContent = time;
 

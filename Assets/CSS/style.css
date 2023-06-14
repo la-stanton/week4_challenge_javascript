@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
   }
-  .wrapper {
+  .container {
     margin: 100px auto 0 auto;
     max-width: 600px;
     text-align: center;
@@ -34,17 +34,7 @@ body {
     top: 10px;
     right: 10px;
   }
-  
-  a {
-    color: black;
-    text-decoration: none;
-    transition: color 0.1s;
-  }
-  
-  a:hover {
-    color: #70707a;
-  }
-  
+   
   button {
     display: inline-block;
     margin: 5px;
@@ -69,17 +59,4 @@ body {
     font-size: 100%;
   }
   
-  ol {
-    padding-left: 20px;
-    max-height: 300px;
-    overflow: auto;
-  }
   
-  li {
-    padding: 5px;
-    list-style: decimal;
-  }
-  
-  li:nth-child(odd) {
-    background-color: #dfdae7;
-  }
